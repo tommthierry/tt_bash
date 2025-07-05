@@ -55,19 +55,15 @@ tt_helper() {
     echo;
     echoColor "TT software tools" "yellow";
     echoSeparator;
-    echoHelpLine "install" "Install TT software to the latest version available";
     echoHelpLine "update" "Update TT software to the latest version available";
     echoHelpLine "source" "Resource bashrc file to consider modifications";
 
-
-    echo;
-    echo;
-    echoColor "Docker / Local Project" "yellow";
-    echoSeparator;
-    echoHelpLine "start" "Start docker containers for a magento project; --xdebug can be passed as parameter to start project with xDebug enable";
-    echoHelpLine "kill" "Remove docker containers for a magento project";
-    # echoHelpLine "xdebugEnable" "Configure xdebug in container properly; Need to be run every start at the moment";
-    # echoHelpLine "xdebugConfigureProject" "Add proper xdebug configuration in VSC";
+    # echo;
+    # echo;
+    # echoColor "Docker / Local Project" "yellow";
+    # echoSeparator;
+    # echoHelpLine "start" "Start docker containers for a magento project; --xdebug can be passed as parameter to start project with xDebug enable";
+    # echoHelpLine "kill" "Remove docker containers for a magento project";
 
 
     if [ $tt_expertMode -eq 1 ]; then
