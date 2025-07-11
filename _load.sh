@@ -14,6 +14,7 @@
 . $tt_aliasFolder/common/echo.sh;
 . $tt_aliasFolder/common/basic_aliases.sh;
 . $tt_aliasFolder/common/utilities.sh;
+. $tt_aliasFolder/common/global_functions.sh;
 
 
 # TT

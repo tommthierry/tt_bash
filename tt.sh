@@ -65,6 +65,11 @@ tt_show_help() {
     echoHelpLine "version" "Display current TT version"
     echo
     
+    # Utility commands
+    echoColor "Utilities:" "green"
+    echoHelpLine "removeZoneIdentifiers" "Remove Zone.Identifier files from directory"
+    echo
+    
     # Development commands
     echoColor "Development:" "green"
     echoHelpLine "npm" "Run npm commands with enhanced output"
@@ -117,7 +122,7 @@ tt_execute_command() {
 
 _tt_complete() {
     local current_word="${COMP_WORDS[COMP_CWORD]}"
-    local options="npm composer symfony start kill install update source version"
+    local options="npm composer symfony start kill install update source version removeZoneIdentifiers"
     
     # Add expert mode options if enabled
     if [[ $tt_expertMode -eq 1 ]]; then
@@ -137,6 +142,14 @@ complete -F _tt_complete tt
 
 tt_version() {
     tt_show_header
+}
+
+##########################################################################################
+# UTILITY FUNCTIONS
+##########################################################################################
+
+tt_removeZoneIdentifiers() {
+    removeZoneIdentifiers "$@"
 }
 
 ##########################################################################################
